@@ -5,15 +5,14 @@
 
 :root {
   /* layput vars */
-  --aside-w: 0px;      /* SP時 */
-  --gap-x : 0px;       /* 列間ギャップが必要なら */
+  --aside-w: 0px;
+  --gap-x : 0px;     /* 列間ギャップが必要なら */
 
   /* header vars */
   --header-h: 74px;
 
   /* spacing vars */
-  --inner-pl: 15px;   /* SP既定 左padding */
-  --inner-pr: 15px;   /* SP既定 右padding */
+  --inner-p: 15px;   /* 既定 padding */
 }
 
 @include mq("tab") {
@@ -25,10 +24,10 @@
     /* header vars */
     --header-h: 74px; /* 仮 */
     /* spacing vars */
-    --inner-pl: 24px; /* トップ基準の左余白 仮*/
-    --inner-pr: 24px; /* トップ基準の右余白 仮*/
+    --inner-p: 24px; /* 既定 padding  仮*/
   }
 }
+
 @include mq("pc") {
   :root {
     /* layput vars */
@@ -39,8 +38,7 @@
     --header-h: 98px;
 
     /* spacing vars */
-    --inner-pl: 57px; /* トップ基準の左余白 */
-    --inner-pr: 57px; /* トップ基準の右余白 */
+    --inner-p: 57px; /* 既定 padding */
     --inner-max: 1560px; /* PC画面幅大の時用 仮*/
   }
 }
