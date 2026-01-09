@@ -11,7 +11,7 @@
   background-color: aquamarine; // 仮背景
 
   &__inner{
-    padding-block: rem(25) rem(25);
+    padding-block: rem(25);
     padding-inline: var(--inner-p);
     width: 100%;
     max-width: var(--inner-max);
@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: space-between;
     @include mq(pc) {
-      padding-block: rem(33) rem(33);
+      padding-block: rem(33);
     }
   }
 
@@ -28,9 +28,7 @@
     > a {
       display: flex;
       align-items: center;
-      justify-content: center;
       width: rem(136);
-      height: rem(24);
       color: $color-white;
       font-family: Orbitron;
       font-size: rem(24);
@@ -39,16 +37,20 @@
       line-height: 100%;
       @include mq(pc) {
         width: rem(181);
-        height: rem(32);
         font-size: rem(32);
       }
     }
   }
 
   &__nav {
+    position: fixed;
+    inset: var(--header-h) 0 0;
     display: none;
+
     @include mq(pc) {
-      display: block;
+      position: static;
+      display: flex;
+      inset: auto;
     }
   }
 
@@ -57,19 +59,20 @@
       display: none;
     }
   }
-}
 
-/*メニューオープン時*/
-.p-header.is-menu-open {
-  .p-header__nav {
-    display: block;
-    position: fixed;
-    z-index: $z-navPanel;
-    inset: var(--header-h) 0 0 auto;  // 右サイドパネル
+  /*メニューオープン時*/
+  &.is-menu-open {
+    &__nav {
+      display: block;
+      position: fixed;
+      z-index: $z-navPanel;
+      inset: var(--header-h) 0 0 auto;  // 右サイドパネル
 
-    @include mq(pc) {
-      position: static;
-      inset: auto;
+      @include mq(pc) {
+        position: static;
+        display: flex;
+      }
     }
   }
 }
+
