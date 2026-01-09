@@ -1,0 +1,40 @@
+/******************************
+バリアブル
+******************************/
+@use "./mixin" as*;
+
+//color
+$color-text:        #333;
+$color-placeholder: #999;
+$color-bg:          #F7FFFC;
+$color-bg2:         #E6F8F1;  
+$color-main:        #075735;
+$color-secondary:   #00BA6B;
+$color-orange:      #FF8A00;
+$color-lightorange: #E9A012;
+$color-lightgreen:  #CBF7E6;
+$color-gray:        #F1F1F1;
+$color-white:       #fff;
+$color-black:       #000;
+
+
+//z-index設定
+$z-header : 1000;
+$z-headerTitle: 1100;
+$z-navPanel : 900;
+$z-hamburger : 1200;
+$z-loader : 1500;
+$z-modalOverlay : 1500;
+
+//header
+$header-hpc: 98px;
+$header-hsp: 74px;
+$header-mode: fixed; // fixed or sticky
+
+//オリジナルのフォーカスリング
+$focus-color: #2684ff;
+$focus-width: 2px;
+$focus-offset: 3px;
+
+// margin
+$marginDefault: rem(23); //コンポーネントの下の余白
