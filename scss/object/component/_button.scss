@@ -21,12 +21,17 @@
   }
 }
 
-.c-button--primary {
+.c-button--white {
   color: $color-main;
   background: $color-white;
 }
 
-.c-button--secondary {
+.c-button--orange {
   color: $color-white;
   background: linear-gradient(90deg, #FF8A00 0%, #E9A012 100%);
+}
+
+.c-button--green {
+  color: $color-white;
+  background: linear-gradient(270deg, #075735 0%, #00BA6B 100%);
 }
