@@ -6,10 +6,12 @@
 
 /*objects*/
   /*component*/
+  @use "./object/component/logo";
   @use "./object/component/nav-menu";
   @use "./object/component/button";
   @use "./object/component/hamburger";
   /*project*/
   @use "./object/project/header" as ph;
+  @use "./object/project/footer" as pf;
 
   /*utility*/
