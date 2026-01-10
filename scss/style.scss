@@ -13,5 +13,6 @@
   /*project*/
   @use "./object/project/header" as ph;
   @use "./object/project/footer" as pf;
+  @use "./object/project/hero";
 
   /*utility*/

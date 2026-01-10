@@ -1,0 +1,26 @@
+/******************************
+ヒーロー
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-hero {
+  position: relative;
+  padding-block: var(--header-h) rem(31);
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    top: rem(-364);
+    left: rem(-144);
+    z-index: -1;
+    display: block;
+    width: rem(463);
+    height: rem(853);
+    transform: rotate(33.854deg);
+    transform-origin: 0 67%;
+    background: linear-gradient(180deg, #00BA6B 0%, #075735 100%);
+    @include mq(pc) {
+
+    }
+  }
+}
