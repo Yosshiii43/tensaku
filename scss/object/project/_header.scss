@@ -8,7 +8,6 @@
   position: fixed;
   width: 100%;
   z-index: $z-header;
-  background-color: aquamarine; // 仮背景
 
   &__inner{
     padding-block: rem(17);
@@ -37,15 +36,23 @@
 
   &__nav {
     position: fixed;
-    inset: var(--header-h) 0 0;
-    display: none;
+    z-index: $z-navPanel;
+    background: linear-gradient(180deg, #00BA6B 0%, #075735 100%);
+    padding: rem(23) rem(13) rem(53);
+    height: fit-content;
+    top: var(--header-h);
+    right: 0;
+    transform: translateX(100%);
+    transition: all .3s ease;
 
     @include mq(pc) {
       position: static;
+      background: none;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      inset: auto;
+      transform: none;
     }
   }
 
@@ -58,16 +65,10 @@
   /*メニューオープン時*/
   &.is-menu-open {
     .p-header__nav {
-      display: block;
-      position: fixed;
-      z-index: $z-navPanel;
-      inset: var(--header-h) 0 0 auto;  // 右サイドパネル
-      background: linear-gradient(180deg, #00BA6B 0%, #075735 100%);
+      transform: translateX(0);
 
       @include mq(pc) {
-        position: static;
-        display: flex;
-        background: inherit;
+        transform: none;
       }
     }
   }

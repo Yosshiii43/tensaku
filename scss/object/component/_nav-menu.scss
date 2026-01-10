@@ -16,6 +16,7 @@
 
   &__lead {
     color: $color-white;
+    margin-bottom: rem(36);
 
     @include mq(pc) {
       display: none;
@@ -23,7 +24,7 @@
   }
 
   &__list{
-    margin: 0;
+    margin-bottom:rem(39);
     padding: 0;
     list-style: none;
     display: flex;
@@ -31,13 +32,31 @@
     color: $color-white;
     font-size: rem(14);
     line-height: 1;
+    border-top: 1px solid $color-white;
 
     @include mq(pc) {
+      margin-bottom: 0;
       flex-direction: row;
       gap: rclamp(12, 36, 1024, 1280);
       font-size: rem(16);
       font-weight: 700;
+      border: none;
     }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding-block: rem(19);
+    color: inherit;
+    border-bottom: 1px solid $color-white;
+    transition: opacity .2s;
+    @include mq(pc) {
+      padding-block: 0;
+      border: none;
+    }
+
+    &:hover { opacity: .7; }
   }
 
   &__action {
