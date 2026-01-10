@@ -26,11 +26,6 @@
   &__logo {
     > a {
       color: $color-white;
-      font-family: Orbitron;
-      font-size: rclamp(24, 32, 375, 1280);
-      font-style: normal;
-      font-weight: 700;
-      line-height: 100%;
     }
   }
 
