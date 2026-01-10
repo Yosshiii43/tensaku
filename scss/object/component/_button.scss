@@ -1,0 +1,32 @@
+/******************************
+ボタン
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-button {
+  display: inline-block;
+  padding: rclamp(16, 17, 375, 1280) rclamp(25, 39, 375, 1280);
+  font-size: rclamp(14, 16, 375, 1280);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  border-radius: rem(25);
+  transition: all  0.3s ease;
+  border-radius: 999px;
+  box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    transform: translateY(rem(-4));
+  }
+}
+
+.c-button--primary {
+  color: $color-main;
+  background: $color-white;
+}
+
+.c-button--secondary {
+  color: $color-white;
+  background: linear-gradient(90deg, #FF8A00 0%, #E9A012 100%);
+}

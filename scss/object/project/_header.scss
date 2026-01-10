@@ -11,7 +11,7 @@
   background-color: aquamarine; // 仮背景
 
   &__inner{
-    padding-block: rem(25);
+    padding-block: rem(17);
     padding-inline: var(--inner-p);
     width: 100%;
     max-width: var(--inner-max);
@@ -26,19 +26,12 @@
 
   &__logo {
     > a {
-      display: flex;
-      align-items: center;
-      width: rem(136);
       color: $color-white;
       font-family: Orbitron;
-      font-size: rem(24);
+      font-size: rclamp(24, 32, 375, 1280);
       font-style: normal;
       font-weight: 700;
       line-height: 100%;
-      @include mq(pc) {
-        width: rem(181);
-        font-size: rem(32);
-      }
     }
   }
 
@@ -64,15 +57,17 @@
 
   /*メニューオープン時*/
   &.is-menu-open {
-    &__nav {
+    .p-header__nav {
       display: block;
       position: fixed;
       z-index: $z-navPanel;
       inset: var(--header-h) 0 0 auto;  // 右サイドパネル
+      background: linear-gradient(180deg, #00BA6B 0%, #075735 100%);
 
       @include mq(pc) {
         position: static;
         display: flex;
+        background: inherit;
       }
     }
   }

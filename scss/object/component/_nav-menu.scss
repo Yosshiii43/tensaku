@@ -1,0 +1,48 @@
+/******************************
+ナビゲーションメニュー
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-nav-menu {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(pc) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: rclamp(20, 117, 1024, 1280);
+  }
+
+  &__lead {
+    color: $color-white;
+
+    @include mq(pc) {
+      display: none;
+    }
+  }
+
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    font-size: rem(14);
+    line-height: 1;
+
+    @include mq(pc) {
+      flex-direction: row;
+      gap: rclamp(12, 36, 1024, 1280);
+      font-size: rem(16);
+      font-weight: 700;
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    gap: rem(10);
+  }
+}
