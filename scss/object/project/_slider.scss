@@ -5,24 +5,46 @@
 @use "sass:math";
 
 .p-slider {
+  overflow: hidden;
 
-  &__swiper {
+  &__viewport {
     overflow: hidden;
-    width: 100%;
-    margin-inline: auto;
   }
 
-  .swiper-wrapper {
-    transition-timing-function: linear !important;
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: slider-marquee 40s linear infinite;
   }
-  .swiper-slide {
-      width: max-content;
+
+  &__slide {
+    flex: 0 0 auto;
+    margin-right: 24px;
+
+    @media (min-width: 1024px) {
+      margin-right: 44px;
     }
+  }
 
   &__item {
     width: rclamp(280, 324, 375, 1024);
     > img {
       border-radius: 25px;
     }
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@keyframes slider-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
