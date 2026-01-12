@@ -1,0 +1,39 @@
+/******************************
+トップ セクションタイトル
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-section-ttl {
+  padding-block: rem(30);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: rem(5);
+
+  &__head {
+    color: $color-darkgreen;
+    font-family: "Roboto Condensed";
+    font-size: rclamp(12, 15, 320, 375);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    font-size: rclamp(22, 36, 375, 1280);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    width: rem(70);
+    height: rem(12);
+    border-bottom: 2px solid $color-darkgreen;
+    margin-inline: auto;
+  }
+}

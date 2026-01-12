@@ -11,6 +11,8 @@
   @use "./object/component/nav-menu";
   @use "./object/component/button";
   @use "./object/component/hamburger";
+  @use "./object/component/section-ttl";
+
   /*project*/
   @use "./object/project/header" as ph;
   @use "./object/project/footer" as pf;
