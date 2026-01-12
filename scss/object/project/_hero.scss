@@ -6,21 +6,140 @@
 
 .p-hero {
   position: relative;
-  padding-block: var(--header-h) rem(31);
+  padding-block: var(--header-h) rem(20);
+  padding-inline: var(--inner-p);
   overflow: hidden;
+  @include mq(pc) {
+    padding-block: var(--header-h) rem(31);
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: var(--inner-max);
+    margin-inline: auto;
+    z-index: 1;
+  }
   &__bg {
     position: absolute;
-    top: rem(-364);
-    left: rem(-144);
+    top: calc(-1 * rclamp(140, 400, 375, 1024));
+    left: calc(-1 * rclamp(144, 200, 375, 1024));
     z-index: -1;
     display: block;
-    width: rem(463);
-    height: rem(853);
+    width: rclamp(463, 1000, 375, 1024);
+    height: rclamp(853, 1600, 375, 1024);
     transform: rotate(33.854deg);
-    transform-origin: 0 67%;
     background: linear-gradient(180deg, #00BA6B 0%, #075735 100%);
     @include mq(pc) {
+      top: 0;
+      left: 0;
+      width: 66.3%;
+      height: auto;
+      aspect-ratio: 85 / 130;
+      transform: none;
+      clip-path: polygon(0 0, 0% 100%, 100% 0);
+    }
+  }
 
+  &__main {
+    margin-top: rem(14);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include mq(pc) {
+      margin-top: rem(40);
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      max-width: rem(1163);
+      margin-inline: auto;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    @include mq(pc) {
+      width: fit-content;
+    }
+  }
+
+  &__img--pc {
+    display: none;
+    @include mq(pc) {
+      display: block;
+      width: rclamp(500, 699, 1024, 1280);
+      height: auto;
+    }
+  }
+
+  &__catchcopy {
+    position: relative;
+    display: block;
+    color: $color-main;
+    font-size: rclamp(14, 20, 375, 1280);
+    font-weight: 700;
+    line-height: 1;
+    width: fit-content;
+    padding: rclamp(12, 18, 375, 1024) rclamp(15, 37, 375, 1024) rclamp(12, 19, 375, 1024);
+    background-color: $color-white;
+    border-radius: 25px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: rem(16);
+      height: rem(16);
+      background-image: url(/img/img_triangle01.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-40%) translateY(60%) rotate(60deg);
+    }
+  }
+
+  &__title {
+    margin-top: rclamp(23, 33, 375, 1280);
+    color: $color-white;
+    font-size: rclamp(24, 40, 375, 1280);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  &__discription {
+    margin-top: rclamp(15, 17, 375, 1280);
+    color: $color-white;
+    font-size: rclamp(14, 16, 375, 1280);
+    line-height: 1.5;
+  }
+
+  &__img--sp {
+    margin-top: rem(11);
+    width: 100%;
+    @include mq(pc) {
+      display: none;
+    }
+  }
+
+  &__action {
+    margin-top: rem(29);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(19);
+    @include mq(pc) {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: rem(10);
+    }
+  }
+
+  &__button {
+    padding: rem(17) rem(94);
+    font-size: rem(16);
+    @include mq(pc) {
+      padding: rem(17) rem(39);
     }
   }
 }

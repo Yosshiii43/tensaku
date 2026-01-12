@@ -5,11 +5,9 @@
 @use "sass:math";
 
 .c-logo {
-  > a {
-    font-family: Orbitron;
-    font-size: rclamp(24, 32, 375, 1280);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-  }
+  font-family: Orbitron;
+  font-size: rclamp(24, 32, 375, 1280);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
 }

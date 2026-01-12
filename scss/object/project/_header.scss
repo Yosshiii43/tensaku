@@ -13,12 +13,12 @@
     padding-block: rem(17);
     padding-inline: var(--inner-p);
     width: 100%;
-    max-width: var(--inner-max);
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     @include mq(pc) {
+      max-width: var(--inner-max);
       padding-block: rem(33);
     }
   }
