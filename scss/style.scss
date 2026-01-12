@@ -6,6 +6,7 @@
 
 /*objects*/
   /*component*/
+  @use "./object/component/inner";
   @use "./object/component/logo";
   @use "./object/component/nav-menu";
   @use "./object/component/button";

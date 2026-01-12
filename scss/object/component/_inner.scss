@@ -1,0 +1,13 @@
+/******************************
+インナー
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-inner {
+  background-color: aqua;
+  width: 100%;
+  padding-inline: var(--inner-p);
+  max-width: var(--inner-max);
+  margin-inline: auto;
+}
