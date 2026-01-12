@@ -1,0 +1,37 @@
+/******************************
+こんなお悩みはありませんか カード
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-questionnaire-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__ttl {
+    display: inline-block;
+    padding: rem(7) rem(9);
+    margin-bottom: rem(7);
+    color: $color-white;
+    font-weight: 700;
+    line-height: 1;
+    background-color: $color-text;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: rem(19);
+  }
+
+  &__lead {
+    font-size: rclamp(18, 20, 375, 1280);
+    font-weight: 700;
+    margin-bottom: rem(11);
+  }
+
+  &__text {
+    font-size: rem(14);
+  }
+}

@@ -12,11 +12,13 @@
   @use "./object/component/button";
   @use "./object/component/hamburger";
   @use "./object/component/section-ttl";
+  @use "./object/component/questionnaire-card";
 
   /*project*/
   @use "./object/project/header" as ph;
   @use "./object/project/footer" as pf;
   @use "./object/project/hero";
   @use "./object/project/slider";
+  @use "./object/project/questionnaire";
 
   /*utility*/

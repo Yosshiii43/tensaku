@@ -1,0 +1,25 @@
+/******************************
+こんなお悩みはありませんか
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-questionnaire {
+  padding-bottom: rem(82);
+  background-color: $color-bg;
+  &__ttl {
+    margin-bottom: rem(39);
+  }
+
+  &__body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: rem(25);
+  }
+
+  &__card {
+    flex-shrink: 0;
+    width: rem(290);
+  }
+}
