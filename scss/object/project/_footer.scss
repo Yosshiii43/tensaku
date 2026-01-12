@@ -22,8 +22,7 @@
       justify-content: space-between;
       align-items: flex-start;
       gap: rem(65);
-      max-width: rem(1080);
-      padding-inline: rem(20);
+      padding-inline: calc(rem(20) + rem(100));
     }
   }
 
