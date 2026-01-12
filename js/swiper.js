@@ -30,6 +30,9 @@ const slides = document.querySelectorAll('.swiper-slide');
 for ( let i = 0; i <= 1; i++){// 2回繰り返す
 slides.forEach((slide) => {
   const clone = slide.cloneNode(true);
+  //複製分のaltを削除
+  const cloneImage = clone.querySelector('img');
+  cloneImage.removeAttribute('alt');
   // 複製したスライドをSwiperのコンテナに追加
   mySwiper.appendSlide(clone);
 });
