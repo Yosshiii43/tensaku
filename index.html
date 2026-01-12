@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Orbitron:wght@400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" href="img/favicon.png">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 </head>
 <body>
   <header class="l-header p-header" id="js-header">
@@ -142,9 +143,36 @@
       </div> <!-- .p-hero__main ここまで-->
   
   
-      <div class="p-main__slider" style="height: 300px;">
-  
-      </div> <!-- .p-main__slider ここまで-->
+      <div class="p-hero__slide p-slider">
+        <!-- Slider main container -->
+        <div class="swiper p-slider__swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper p-slider__wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide p-slider__slide">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel01.jpg" alt="部下にプログラミングを指導する男性上司" width="648" height="370">
+              </div>
+            </div>
+            <div class="swiper-slide p-slider__slide">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel02.jpg" alt="オフィスでミーティング中に話をしている女性社員" width="648" height="370">
+              </div>
+            </div>
+            <div class="swiper-slide p-slider__slide">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel03.jpg" alt="オフィスで話している男性社員と女性社員" width="648" height="370">
+              </div>
+            </div>
+            <div class="swiper-slide p-slider__slide">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel04.jpg" alt=" オフィスでパソコンに向かう男性社員" width="648" height="370">
+              </div>
+            </div>
+          </div>
+        </div><!-- .swiper ここまで-->
+      </div> <!-- .p-hero__swiper ここまで-->
+
     </div><!-- .p-hero__inner ここまで-->
 
   </section>
@@ -232,6 +260,8 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+  <script src="./js/swiper.js" defer></script>
   <script src="./js/main.js" defer></script>
 </body>
 </html>

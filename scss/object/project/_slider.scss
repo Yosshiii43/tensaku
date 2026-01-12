@@ -1,0 +1,28 @@
+/******************************
+スライダー
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-slider {
+
+  &__swiper {
+    overflow: hidden;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+  .swiper-slide {
+      width: max-content;
+    }
+
+  &__item {
+    width: rclamp(280, 324, 375, 1024);
+    > img {
+      border-radius: 25px;
+    }
+  }
+}

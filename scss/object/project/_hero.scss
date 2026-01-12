@@ -41,22 +41,23 @@
   &__main {
     padding-inline: var(--inner-p);
     margin-top: rem(14);
-    max-width: calc(var(--inner-max) + var(--inner-p) * 2);
+    max-width: var(--inner-max);
     margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     @include mq(pc) {
+      max-width: rem(1163);
       margin-top: rem(40);
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
-      max-width: rem(1163);
-      //margin-inline: auto;
+      justify-content: center;
+      gap: rem(24);
     }
   }
 
   &__text {
+    flex-shrink: 0;
     width: 100%;
     @include mq(pc) {
       width: fit-content;
@@ -69,6 +70,7 @@
   &__img--pc {
     display: none;
     @include mq(pc) {
+      flex-shrink: 0;
       display: block;
       width: rclamp(500, 699, 1024, 1280);
       height: auto;
@@ -162,5 +164,9 @@
       color: $color-main;
       background: $color-white;
     }
+  }
+
+  &__slide {
+    margin-top: rem(42);
   }
 }
