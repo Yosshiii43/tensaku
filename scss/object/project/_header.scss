@@ -19,7 +19,8 @@
     justify-content: space-between;
     @include mq(pc) {
       max-width: var(--inner-max);
-      padding-block: rem(33);
+      padding-block: rem(24);
+      gap: rclamp(24, 46, 1024, 1280);
     }
   }
 
@@ -30,6 +31,7 @@
   }
 
   &__nav {
+    flex-grow: 1;
     position: fixed;
     z-index: $z-navPanel;
     background: linear-gradient(180deg, #00BA6B 0%, #075735 100%);
@@ -48,6 +50,15 @@
       align-items: center;
       justify-content: flex-start;
       transform: none;
+    }
+  }
+
+  &__action {
+    display: none;
+
+    @include mq(pc) {
+      display: flex;
+      gap: rem(10);
     }
   }
 
