@@ -20,11 +20,11 @@
   &__bg {
     position: absolute;
     top: calc(-1 * rclamp(140, 400, 375, 1024));
-    left: calc(-1 * rclamp(144, 200, 375, 1024));
+    left: calc(-1 * rclamp(180, 200, 375, 1024));
     z-index: -1;
     display: block;
     width: rclamp(463, 1000, 375, 1024);
-    height: rclamp(853, 1600, 375, 1024);
+    height: rclamp(960, 1600, 375, 1024);
     transform: rotate(33.854deg);
     background: linear-gradient(180deg, #00BA6B 0%, #075735 100%);
     @include mq(pc) {
