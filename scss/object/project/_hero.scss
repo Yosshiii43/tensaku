@@ -46,6 +46,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @include mq(tab) {
+      max-width: rem(560);
+    }
     @include mq(pc) {
       max-width: rem(1163);
       margin-top: rem(40);
@@ -131,7 +134,9 @@
 
   &__img--sp {
     margin-top: rem(11);
+    margin-inline: auto;
     width: 100%;
+    max-width: rem(420);
     @include mq(pc) {
       display: none;
     }
