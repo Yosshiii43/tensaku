@@ -7,7 +7,6 @@
 .p-hero {
   position: relative;
   padding-block: var(--header-h) rem(20);
-  padding-inline: var(--inner-p);
   overflow: hidden;
   @include mq(pc) {
     padding-block: var(--header-h) rem(31);
@@ -15,10 +14,9 @@
 
   &__inner {
     width: 100%;
-    max-width: var(--inner-max);
     margin-inline: auto;
-    z-index: 1;
   }
+  
   &__bg {
     position: absolute;
     top: calc(-1 * rclamp(140, 400, 375, 1024));
@@ -41,8 +39,10 @@
   }
 
   &__main {
+    padding-inline: var(--inner-p);
     margin-top: rem(14);
-    width: 100%;
+    max-width: calc(var(--inner-max) + var(--inner-p) * 2);
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -52,7 +52,7 @@
       align-items: center;
       justify-content: space-between;
       max-width: rem(1163);
-      margin-inline: auto;
+      //margin-inline: auto;
     }
   }
 
@@ -60,6 +60,9 @@
     width: 100%;
     @include mq(pc) {
       width: fit-content;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
   }
 
@@ -96,6 +99,9 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-40%) translateY(60%) rotate(60deg);
+      @include mq(pc) {
+        transform: translateX(-56%) translateY(62%) rotate(60deg);
+      }
     }
   }
 
@@ -105,6 +111,9 @@
     font-size: rclamp(24, 40, 375, 1280);
     font-weight: 700;
     line-height: 1.5;
+    @include mq(pc) {
+      margin-left: rem(3);
+    }
   }
 
   &__discription {
@@ -112,6 +121,10 @@
     color: $color-white;
     font-size: rclamp(14, 16, 375, 1280);
     line-height: 1.5;
+    @include mq(pc) {
+      flex-grow: 1;
+      margin-left: rem(3);
+    }
   }
 
   &__img--sp {
@@ -129,6 +142,7 @@
     align-items: center;
     gap: rem(19);
     @include mq(pc) {
+      margin-top: rem(77);
       flex-direction: row;
       justify-content: flex-start;
       gap: rem(10);
@@ -140,6 +154,13 @@
     font-size: rem(16);
     @include mq(pc) {
       padding: rem(17) rem(39);
+    }
+  }
+
+  &__button:first-child {
+    @include mq(pc) {
+      color: $color-main;
+      background: $color-white;
     }
   }
 }
