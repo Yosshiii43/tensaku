@@ -7,6 +7,6 @@
 .c-inner {
   width: 100%;
   padding-inline: var(--inner-p);
-  max-width: var(--inner-max);
+  max-width: calc(var(--inner-max) + var(--inner-p) * 2);
   margin-inline: auto;
 }
