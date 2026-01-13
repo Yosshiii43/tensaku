@@ -50,7 +50,7 @@
   &__ttl2,
   &__ttl3 {
     background-color: $color-white;
-    padding: rem(10) rem(15);
+    padding: rclamp(6, 10, 373, 1280) rclamp(10, 15, 373, 1280);
     width: fit-content;
   }
 
