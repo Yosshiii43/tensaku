@@ -1,0 +1,78 @@
+/******************************
+コンセプト
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-consept {
+  position: relative;
+  background: $gradation-green;
+  padding-block: rem(86) rem(24);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: rclamp(60, 80, 375, 1024) solid transparent;
+    border-left: rclamp(60, 80, 375, 1024) solid transparent;
+    border-top: rclamp(48, 61, 375, 1024) solid $color-bg;
+    border-bottom: 0;
+  }
+
+  &__ttl {
+    color: $color-main;
+    text-align: center;
+    font-size: rclamp(24, 32, 373, 1280);
+    font-weight: 700;
+    line-height: 1;
+    display: grid;
+    row-gap: rem(13);
+    justify-items: center;
+  }
+
+  &__ttl-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(13);
+    @include mq(tab) {
+      flex-direction: row;
+    }
+  }
+
+  &__ttl1,
+  &__ttl2,
+  &__ttl3 {
+    background-color: $color-white;
+    padding: rem(10) rem(15);
+    width: fit-content;
+  }
+
+  &__ttl2 {
+    @include mq(tab) {
+      padding-right: 0;
+    }
+  }
+  
+  &__ttl3 {
+    @include mq(tab) {
+      padding-left: 0;
+    }
+  }
+
+  &__text {
+    margin-top: rem(15);
+    color: $color-white;
+    text-align: center;
+
+    > span {
+      display: inline-block;
+    }
+  }
+}
