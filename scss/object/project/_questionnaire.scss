@@ -20,7 +20,8 @@
   }
 
   &__card {
-    flex-shrink: 0;
-    width: rem(290);
+    flex-basis: 28.3%;
+    max-width: rem(320);
+    min-width: rem(240);
   }
 }
