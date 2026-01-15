@@ -13,6 +13,7 @@
   @use "./object/component/hamburger";
   @use "./object/component/section-ttl";
   @use "./object/component/questionnaire-card";
+  @use "./object/component/features-item";
 
   /*project*/
   @use "./object/project/header" as ph;
@@ -21,5 +22,6 @@
   @use "./object/project/slider";
   @use "./object/project/questionnaire";
   @use "./object/project/consept";
+  @use "./object/project/features";
 
   /*utility*/

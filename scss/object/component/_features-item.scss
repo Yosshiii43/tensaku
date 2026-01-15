@@ -1,0 +1,80 @@
+/******************************
+TENSAKUが誇る5つの特徴 アイテム
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-features-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: rem(1024);
+  @include mq(tab) {
+    flex-direction: row;
+  }
+
+  &__body {
+    position: relative;
+    padding-block: rem(40) rem(32);
+    padding-left: rem(24);
+    @include mq(tab) {
+      flex-basis: 55%;
+      padding-block: rclamp(20, 99, 768, 1280) rem(21);
+      padding-left: rclamp(48, 57, 768, 1280) ;
+    }
+    @include mq(pc) {
+      flex-basis: 43.26%;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    color: $color-lightgreen;
+    font-weight: 700;
+    font-size: rclamp(60, 96, 375, 1280);
+    @include mq(tab) {
+      top: rclamp(-40, 17, 768, 1280);
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__ttl{
+    display: block;
+    font-size: rclamp(20, 28, 375, 1280);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: rem(30);
+  }
+
+  &__discription {
+
+  }
+
+  &__img{
+    flex-basis: 45%;
+    @include mq(pc) {
+      flex-basis: 56.74%;
+    }
+
+    > img {
+      width: 100%;
+      @include mq(tab) {
+        padding-left: rem(20);
+      }
+    }
+  }
+}
+
+.c-features-item:nth-child(odd) {
+  @include mq(tab) {
+    flex-direction: row-reverse;
+  }
+}
