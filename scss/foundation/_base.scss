@@ -13,6 +13,7 @@
 
   /* spacing vars */
   --inner-p: 15px;   /* 既定 padding */
+  --inner-m: 15; /* 既定 margin */
 
   --inner-max: 560px; /* sp画面幅大の時用 仮*/
 }
@@ -26,9 +27,10 @@
     /* header vars */
     --header-h: 74px; /* 仮 */
     /* spacing vars */
-    --inner-p: 24px; /* 既定 padding  仮*/
+    --inner-p: 32px; /* 既定 padding  仮*/
+    --inner-m: 24px; /* 既定 margin  仮*/
 
-    --inner-max: 780px; /* 画面幅大の時用 仮*/
+    --inner-max: 844px; /* 画面幅大の時用 仮*/
   }
 }
 
@@ -42,8 +44,10 @@
     --header-h: 98px;
 
     /* spacing vars */
+
     --inner-p: 57px; /* 既定 padding */
-    --inner-max: 1560px; /* PC画面幅大の時用 仮*/
+    --inner-m: 57px; /* 既定 margin */
+    --inner-max: 1384px; /* PC画面幅大の時用 仮*/
   }
 }
 
