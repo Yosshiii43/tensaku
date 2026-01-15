@@ -8,10 +8,10 @@
   position: fixed;
   width: 100%;
   z-index: $z-header;
+  padding-inline: var(--inner-p);
 
-  &__inner{
+  &__inner{  
     padding-block: rem(17);
-    padding-inline: var(--inner-p);
     width: 100%;
     margin-inline: auto;
     display: flex;
