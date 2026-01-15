@@ -14,6 +14,7 @@
   @use "./object/component/section-ttl";
   @use "./object/component/questionnaire-card";
   @use "./object/component/features-item";
+  @use "./object/component/voice-card";
 
   /*project*/
   @use "./object/project/header" as ph;
@@ -23,5 +24,6 @@
   @use "./object/project/questionnaire";
   @use "./object/project/consept";
   @use "./object/project/features";
+  @use "./object/project/voices";
 
   /*utility*/
