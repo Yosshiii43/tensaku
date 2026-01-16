@@ -5,10 +5,78 @@
 @use "sass:math";
 
 .p-voices {
-  padding-bottom: rem(113);
-  background-color: $color-bg;
+  padding-bottom: rem(171);
+  background-color: $color-bg2;
 
   &__ttl {
-    margin-bottom: rem(117);
+    margin-bottom: rem(87);
+  }
+
+  &__body {
+    position: relative;
+    max-width: calc(rem(262) + rem(37) * 2);
+    margin-inline: auto;
+    @include mq(tab) {
+      max-width: calc(rem(550) + rem(37) * 2);
+    }
+    @include mq(pc) {
+      max-width: calc(rem(838) + rem(37) * 2);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      width: rem(44);
+      height: rem(44);
+
+      svg {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+      width: rem(44);
+      height: rem(44);
+      margin: auto;
+    }
+
+    .swiper-button-prev::after {
+      background-image: url(/img/icon_arrowq_left.svg);
+    }
+
+    .swiper-button-next::after {
+      background-image: url(/img/icon_arrow_right.svg);
+    }
+  }
+  .swiper-pagination {
+    bottom: rem(-64);
+  }
+
+  /* ページネーション色とサイズ */
+  .swiper-pagination > .swiper-pagination-bullet {
+    background-color: rgba(0, 51, 29, 0.20);
+    height: rem(8);
+    width: rem(8);
+  }
+  /* ページネーションがアクティブ時の色 */
+  .swiper-pagination > .swiper-pagination-bullet-active {
+    background-color: rgba(0, 51, 29, 1);
+  }
+  /* ページネーション間隔 */
+  .swiper-pagination .swiper-pagination-bullet {
+    margin-inline: rem(8);
   }
 }

@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Orbitron:wght@400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" href="img/favicon.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -144,54 +144,54 @@
   
   
       <div class="p-hero__slide p-slider">
-  <div class="p-slider__viewport">
-    <div class="p-slider__track">
-      <!-- 1セット目 -->
-      <div class="p-slider__slide">
-        <div class="p-slider__item">
-          <img src="./img/img_mv-carousel01.jpg" alt="部下にプログラミングを指導する男性上司" width="648" height="370">
-        </div>
-      </div>
-      <div class="p-slider__slide">
-        <div class="p-slider__item">
-          <img src="./img/img_mv-carousel02.jpg" alt="オフィスでミーティング中に話をしている女性社員" width="648" height="370">
-        </div>
-      </div>
-      <div class="p-slider__slide">
-        <div class="p-slider__item">
-          <img src="./img/img_mv-carousel03.jpg" alt="オフィスで話している男性社員と女性社員" width="648" height="370">
-        </div>
-      </div>
-      <div class="p-slider__slide">
-        <div class="p-slider__item">
-          <img src="./img/img_mv-carousel04.jpg" alt=" オフィスでパソコンに向かう男性社員" width="648" height="370">
-        </div>
-      </div>
+        <div class="p-slider__viewport">
+          <div class="p-slider__track">
+            <!-- 1セット目 -->
+            <div class="p-slider__slide">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel01.jpg" alt="部下にプログラミングを指導する男性上司" width="648" height="370">
+              </div>
+            </div>
+            <div class="p-slider__slide">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel02.jpg" alt="オフィスでミーティング中に話をしている女性社員" width="648" height="370">
+              </div>
+            </div>
+            <div class="p-slider__slide">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel03.jpg" alt="オフィスで話している男性社員と女性社員" width="648" height="370">
+              </div>
+            </div>
+            <div class="p-slider__slide">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel04.jpg" alt=" オフィスでパソコンに向かう男性社員" width="648" height="370">
+              </div>
+            </div>
 
-      <!-- 2セット目 -->
-      <div class="p-slider__slide" aria-hidden="true">
-        <div class="p-slider__item">
-          <img src="./img/img_mv-carousel01.jpg" alt="" width="648" height="370">
+            <!-- 2セット目 -->
+            <div class="p-slider__slide" aria-hidden="true">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel01.jpg" alt="" width="648" height="370">
+              </div>
+            </div>
+            <div class="p-slider__slide" aria-hidden="true">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel02.jpg" alt="" width="648" height="370">
+              </div>
+            </div>
+            <div class="p-slider__slide" aria-hidden="true">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel03.jpg" alt="" width="648" height="370">
+              </div>
+            </div>
+            <div class="p-slider__slide" aria-hidden="true">
+              <div class="p-slider__item">
+                <img src="./img/img_mv-carousel04.jpg" alt="" width="648" height="370">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="p-slider__slide" aria-hidden="true">
-        <div class="p-slider__item">
-          <img src="./img/img_mv-carousel02.jpg" alt="" width="648" height="370">
-        </div>
-      </div>
-      <div class="p-slider__slide" aria-hidden="true">
-        <div class="p-slider__item">
-          <img src="./img/img_mv-carousel03.jpg" alt="" width="648" height="370">
-        </div>
-      </div>
-      <div class="p-slider__slide" aria-hidden="true">
-        <div class="p-slider__item">
-          <img src="./img/img_mv-carousel04.jpg" alt="" width="648" height="370">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     </div><!-- .p-hero__inner ここまで-->
   </section>
   <!-- ヒーロー ここまで-->
@@ -336,17 +336,20 @@
 
   <!-- 導入実績・利用者の声 -->
   <section class="p-voices" id="voices">
-    <div class="p-voices_inner">
+    <div class="p-voices_inner c-inner--voices">
       <h2 class="p-voices__ttl c-section-ttl">
         <span class="c-section-ttl__head">voices</span>
         <span class="c-section-ttl__body">導入実績・利用者の声</span>
       </h2>
 
       <div class="p-voices__body">
+
         <!-- Slider main container -->
-        <div class="p-voices__swiper swiper">
+        <div class="p-voices__swiper p-voices-swiper swiper">
+
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
+
             <!-- Slides -->
             <div class="swiper-slide">
               <article class="p-voices__card c-voice-card">
@@ -355,6 +358,17 @@
                   <h3 class="c-voice-card__ttl">添削のスピードが<br>3倍にUPしました!!</h3>
                 </div>
                 <p class="c-voice-card__position">デザイン会社・ディレクター</p>
+                <p class="c-voice-card__text">これまで弊社ではWebでデザインしたクリエイティブをわざわざPDFに落とし、文字を入れる形でレビューを行っていましたが、TENSAKUを導入したことによって、コミュニケーションコストが約半分になり、修正完了までのスピードが1.5倍になりました。クライアントからも分かりやすいと評判で、助かりますね。</p>
+              </article>
+            </div><!-- swiper-slide -->
+
+            <div class="swiper-slide">
+              <article class="p-voices__card c-voice-card">
+                <div class="c-voice-card__head">
+                  <div class="c-voice-card__icon"><img src="./img/icon_man.svg" alt="" width="41" height="41"></div>
+                  <h3 class="c-voice-card__ttl">添削のスピードが<br>3倍にUPしました!!</h3>
+                </div>
+                <p class="c-voice-card__position">広告代理店・デザイナー</p>
                 <p class="c-voice-card__text">これまで弊社ではWebでデザインしたクリエイティブをわざわざPDFに落とし、文字を入れる形でレビューを行っていましたが、TENSAKUを導入したことによって、コミュニケーションコストが約半分になり、修正完了までのスピードが1.5倍になりました。クライアントからも分かりやすいと評判で、助かりますね。</p>
               </article>
             </div><!-- swiper-slide -->
@@ -380,15 +394,24 @@
                 <p class="c-voice-card__text">これまで弊社ではWebでデザインしたクリエイティブをわざわざPDFに落とし、文字を入れる形でレビューを行っていましたが、TENSAKUを導入したことによって、コミュニケーションコストが約半分になり、修正完了までのスピードが1.5倍になりました。クライアントからも分かりやすいと評判で、助かりますね。</p>
               </article>
             </div><!-- swiper-slide -->
+
+            <div class="swiper-slide">
+              <article class="p-voices__card c-voice-card">
+                <div class="c-voice-card__head">
+                  <div class="c-voice-card__icon"><img src="./img/icon_man.svg" alt="" width="41" height="41"></div>
+                  <h3 class="c-voice-card__ttl">添削のスピードが<br>3倍にUPしました!!</h3>
+                </div>
+                <p class="c-voice-card__position">広告代理店・デザイナー</p>
+                <p class="c-voice-card__text">これまで弊社ではWebでデザインしたクリエイティブをわざわざPDFに落とし、文字を入れる形でレビューを行っていましたが、TENSAKUを導入したことによって、コミュニケーションコストが約半分になり、修正完了までのスピードが1.5倍になりました。クライアントからも分かりやすいと評判で、助かりますね。</p>
+              </article>
+            </div><!-- swiper-slide -->
           </div><!-- swiper-wrapper -->
+        </div><!-- p-voices__swiper p-voices-swiper swiper -->
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
-        </div><!-- p-voices__swiper swiper -->
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
       </div><!-- p-voices__body -->
@@ -461,7 +484,8 @@
       <p class="p-footer__copyright--sp">Copyright © TENSAKU Ltd. All Rights Reserved.</p>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <script src="./js/swiper.js" defer></script>
   <script src="./js/main.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+/******************************
+Swiper
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-voices-swiper {
+  position: relative;
+  overflow: hidden;
+  max-width: calc(rem(262) + rem(26) * 2);
+  @include mq(tab) {
+    max-width: calc(rem(262) * 2 + rem(26));
+  }
+  @include mq(pc) {
+    max-width: calc(rem(262) * 3 + rem(26) * 2);
+  }
+  .swiper-wrapper {
+
+  }
+  .swiper-slide {
+    width: fit-content;
+  }
+
+}
