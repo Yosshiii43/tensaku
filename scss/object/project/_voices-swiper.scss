@@ -14,9 +14,7 @@ Swiper
   @include mq(pc) {
     max-width: calc(rem(262) * 3 + rem(26) * 2);
   }
-  .swiper-wrapper {
 
-  }
   .swiper-slide {
     width: fit-content;
   }
