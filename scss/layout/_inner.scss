@@ -1,17 +1,17 @@
 /******************************
 インナー
 ******************************/
-@use "../../foundation/forwards" as *;
+@use "../foundation/forwards" as *;
 @use "sass:math";
 
-.c-inner {
+.l-inner {
   width: 100%;
   padding-inline: var(--inner-p);
   max-width: calc(var(--inner-max) + var(--inner-p) * 2);
   margin-inline: auto;
 }
 
-.c-inner--voices {
+.l-inner--voices {
   width: 100%;
   padding-inline: var(--inner-p);
   margin-inline: auto;
