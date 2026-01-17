@@ -129,3 +129,21 @@ if (urlHash) {
     });
   }
 }
+
+
+//--------------------------------------------------------------------------
+// ご利用の流れ
+//--------------------------------------------------------------------------
+function setTriangleSize() {
+  const items = document.querySelectorAll('.c-flow-list__item');
+
+  items.forEach(item => {
+    const halfTriangleHeight = item.offsetHeight / 2;
+    const halfTriangleWidth = item.offsetWidth / 2;
+    item.style.setProperty('--pc-triangle-height', `${halfTriangleHeight}px`);
+    item.style.setProperty('--sp-triangle-half', `${halfTriangleWidth}px`);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', setTriangleSize);
+window.addEventListener('resize', setTriangleSize);

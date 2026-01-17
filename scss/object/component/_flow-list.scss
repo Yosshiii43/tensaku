@@ -1,0 +1,105 @@
+/******************************
+ご利用の流れ　リスト
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-flow-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include mq(tab) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item {
+    padding: rem(27) rem(13) rem(20);
+    position: relative;
+    @include mq(tab) {
+      padding: rem(27) rem(6) rem(29) rem(20);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      z-index: 1;
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-right: var(--sp-triangle-hlef, 124px) solid transparent;
+      border-left: var(--sp-triangle-hlef,  124px) solid transparent;
+      border-bottom: 0;
+      @include mq(tab) {
+        bottom: auto;
+        left: auto;
+        top: 0;
+        right: -14px;
+        border-bottom: var(--pc-triangle-height, 107px) solid transparent;
+        border-right: 0;
+      }
+    }
+
+    &:first-child {
+      background-color: $color-flow1;
+      &::after {
+        border-top: 14px solid $color-flow1;
+        @include mq(tab) {
+          border-top: var(--pc-triangle-height, 107px) solid transparent;
+          border-left: 14px solid $color-flow1;
+        }
+      }
+    }
+    &:nth-child(2) {
+      background-color: $color-flow2;
+      &::after {
+        border-top: 14px solid $color-flow2;
+        @include mq(tab) {
+          border-top: var(--pc-triangle-height, 107px) solid transparent;
+          border-left: 14px solid $color-flow2;
+        }
+      }
+    }
+    &:nth-child(3) {
+      background-color: $color-flow3;
+      &::after {
+        border-top: 14px solid $color-flow3;
+        @include mq(tab) {
+          border-top: var(--pc-triangle-height, 107px) solid transparent;
+          border-left: 14px solid $color-flow3;
+        }
+      }
+    }
+    &:last-child {
+      background-color: $color-flow4;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__step {
+    text-transform: uppercase;
+    color: $color-gray;
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: rem(35);
+  }
+
+  &__ttl {
+    color: $color-darkgreen;
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: rem(20);
+    @include mq(tab) {
+      font-size: rclamp(18, 20, 768, 1280);
+    }
+  }
+
+  &__text {
+    font-size: rem(14);
+  }
+}
