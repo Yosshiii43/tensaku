@@ -147,3 +147,32 @@ function setTriangleSize() {
 
 document.addEventListener('DOMContentLoaded', setTriangleSize);
 window.addEventListener('resize', setTriangleSize);
+
+
+//--------------------------------------------------------------------------
+// よくある質問（タブ機能）
+//--------------------------------------------------------------------------
+
+document.addEventListener( 'DOMContentLoaded', () =>{
+  const tabMenus = document.querySelectorAll('.js-tabMenu');
+  const tabContents = document.querySelectorAll('.js-tabContent');
+
+  tabMenus.forEach(menu => {
+    menu.addEventListener('click', (e) => {
+      const targetId = e.currentTarget.getAttribute('aria-controls');
+      const targetContent = document.getElementById(targetId);
+
+      tabMenus.forEach(btn => {
+        const isActive = btn === e.currentTarget;
+        btn.classList.toggle('is-active', isActive);
+        btn.setAttribute('aria-selected', isActive);
+      });
+
+      tabContents.forEach(panel => {
+        const isActive = panel === targetContent;
+        panel.classList.toggle('is-active', isActive);
+        panel.hidden =!isActive;
+      });
+    });
+  });
+});

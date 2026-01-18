@@ -1,0 +1,98 @@
+/******************************
+よくある質問　各アイテム
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-accordion {
+
+  &__summary {
+    padding: rem(12) rclamp(16, 28, 375, 1280) rem(12) rclamp(20, 50, 375, 1280);
+    display: grid;
+    grid-template-columns: rem(36) 1fr rem(30);
+    align-items: center;
+    gap: rclamp(16, 32, 375, 1280);
+    color: $color-white;
+    font-weight: 700;
+    line-height: 1.5;
+    background-color: $color-orange;
+  }
+
+  &__icon-q,
+  &__icon-a {
+    width: rem(36);
+    height: rem(36);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Condensed";
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__icon-q {
+    color: $color-orange;
+    background-color: $color-white;
+  }
+
+  &__icon-a {
+    color: $color-white;
+    background-color: $color-orange;
+  }
+
+  &__icon-open-close {
+    width: rem(30);
+    height: rem(30);
+    background-image: url(/img/icon_plus.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /* --------アコーディオンの中身のスタイル-------- */
+  &::details-content {
+    display: grid;
+    grid-template-columns: rem(36) 1fr;
+    align-items: center;
+    gap: rclamp(16, 32, 375, 1280);
+    padding-inline: rclamp(20, 49, 375, 1280) rclamp(46, 57, 375, 1280) ;
+    background-color: $color-white;
+    border-color: $color-orange;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    transition:
+      height 0.4s,
+      content-visibility 0.4s allow-discrete;
+    height: 0;
+    overflow: clip;
+  }
+
+  /* --------アコーディオンの中身のスタイル（開いている時）-------- */
+  &[open] {
+    &::details-content {
+      padding-block: rem(20) rem(19);
+    }
+
+    .c-accordion__icon-open-close {
+      background-image: url(/img/icon_minus.svg);
+    }
+  }
+}
+
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords; /* height:0（数値型） → auto（文字型） のアニメーションを可能にするための指定 */
+  }
+  .c-accordion[open]::details-content {
+    height: auto;
+  }
+}
+
+/* height:0→autoへのアニメーションが対応していない場合は、固定値にアニメーションさせる */
+@supports not (interpolate-size: allow-keywords) {
+  .c-accordion[open]::details-content {
+    height: 150px;
+    overflow-y: scroll;
+  }
+}

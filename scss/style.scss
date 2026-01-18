@@ -18,6 +18,7 @@
   @use "./object/component/voice-card";
   @use "./object/component/flow-list";
   @use "./object/component/price-card";
+  @use "./object/component/accordion";
 
   /*project*/
   @use "./object/project/header" as ph;
