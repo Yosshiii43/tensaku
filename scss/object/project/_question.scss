@@ -1,0 +1,13 @@
+/******************************
+よくある質問
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-question {
+  background-color: $color-bg2;
+
+  &__ttl {
+    margin-bottom: rem(19);
+  }
+}
