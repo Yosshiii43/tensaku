@@ -19,3 +19,13 @@
     max-width: calc(rem(912) + var(--inner-p) * 2);
   }
 }
+
+.l-inner--cta {
+  width: 100%;
+  max-width: rem(590);
+  padding-inline: var(--inner-p);
+  margin-inline: auto;
+  @include mq(tab) {
+    max-width: calc(rem(984) + var(--inner-p) * 2);
+  }
+}

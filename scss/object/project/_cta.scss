@@ -1,0 +1,87 @@
+/******************************
+トップCTA
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-cta {
+  padding-block: rem(35);
+  background: linear-gradient(95deg, #00BA6B -0.71%, #075735 100%);
+
+  &__body {
+    margin-inline: auto;
+    background-color: $color-white;
+    border-radius: 20px;
+    padding-block: rem(36);
+    padding-inline: rclamp(15, 36, 375, 767);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(21);
+    @include mq(tab) {
+      padding-block: rem(70) rem(100);
+      padding-inline: 0 rclamp(24, 58, 768, 1280);
+      grid-template-columns: rclamp(372, 428, 768, 1280);
+      justify-content: flex-end;
+    }
+  }
+
+  &__img {
+    @include mq(tab) {
+      position: absolute;
+      top: 50%;
+      right: calc(rem(21) + rclamp(372, 428, 768, 1280) + rclamp(24, 58, 768, 1280));
+      transform: translateY(-50%);
+      width: rclamp(420, 638, 768, 1024);
+      height: auto;
+      aspect-ratio: 638 / 374;
+      aspect-ratio: 1398 / 804;
+    }
+  }
+
+  &__main {
+
+  }
+
+  &__catch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(8) 0;
+    margin-bottom: rem(30);
+    @include mq(tab) {
+      justify-content: flex-start;
+    }
+
+    > span {
+      display: inline-block;
+      font-size: rclamp(20, 24, 375, 1280);
+      line-height: 1.333;
+      font-weight: 700;
+      background: linear-gradient(transparent 75%, $color-secondary 25%);
+    }
+  }
+
+  &__text {
+    font-size: rem(14);
+    margin-bottom: rem(28);
+  }
+
+  &__text:last-of-type {
+    margin-bottom: rem(40);
+    @include mq(tab) {
+      margin-bottom: rem(65);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: rem(10);
+
+    @include mq(tab) {
+      justify-content: flex-start;
+    }
+  }
+}
