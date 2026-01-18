@@ -1,0 +1,53 @@
+/******************************
+料金プラン
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-price {
+  background-color: $color-bg;
+  padding-bottom: rem(65);
+
+  &__ttl {
+    margin-bottom: rem(14);
+  }
+
+  &__discription {
+    text-align: center;
+    font-size: rclamp(18, 20, 375, 1280);
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: rem(81);
+  }
+
+  &__list {
+    width: rem(309);
+    margin-inline: auto;
+    border-radius: 20px;
+    margin-bottom: rem(45);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(28);
+    @include mq(tab) {
+      width: 100%;
+      max-width: rem(983);
+      grid-template-columns: repeat(3, 1fr);
+      gap: rclamp(16, 28, 768, 1280);
+    }
+  }
+
+  &__notes {
+    font-size: rem(14);
+    max-width: rem(983);
+    margin-inline: auto;
+  }
+
+  &__note {
+    margin-left: 1em;
+    text-indent: -1em;
+
+    &::before {
+      content: "・";
+    }
+  }
+}

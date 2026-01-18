@@ -17,6 +17,7 @@
   @use "./object/component/features-item";
   @use "./object/component/voice-card";
   @use "./object/component/flow-list";
+  @use "./object/component/price-card";
 
   /*project*/
   @use "./object/project/header" as ph;
@@ -29,5 +30,6 @@
   @use "./object/project/voices";
   @use "./object/project/voices-swiper";
   @use "./object/project/flow";
+  @use "./object/project/price";
 
   /*utility*/
