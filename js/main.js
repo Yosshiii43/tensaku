@@ -157,6 +157,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   const tabMenus = document.querySelectorAll('.js-tabMenu');
   const tabContents = document.querySelectorAll('.js-tabContent');
 
+  // タブボタン切り替え
   tabMenus.forEach(menu => {
     menu.addEventListener('click', (e) => {
       const targetId = e.currentTarget.getAttribute('aria-controls');
@@ -168,10 +169,19 @@ document.addEventListener( 'DOMContentLoaded', () =>{
         btn.setAttribute('aria-selected', isActive);
       });
 
+      // タブコンテンツ切り替え
       tabContents.forEach(panel => {
         const isActive = panel === targetContent;
         panel.classList.toggle('is-active', isActive);
         panel.hidden =!isActive;
+
+        // ★ 非アクティブになるパネル内の accordion をすべて閉じる
+        if (!isActive) {
+          const accordions = panel.querySelectorAll('details.c-accordion[open]');
+          accordions.forEach(details => {
+            details.removeAttribute('open');
+          });
+        }
       });
     });
   });
