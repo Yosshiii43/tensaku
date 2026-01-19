@@ -108,6 +108,10 @@
         transform: translateX(-45%) translateY(58%) rotate(60deg);
       }
     }
+
+    > span {
+      letter-spacing: -2px;
+    }
   }
 
   &__title {
@@ -173,5 +177,14 @@
 
   &__slide {
     margin-top: rem(42);
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
 }

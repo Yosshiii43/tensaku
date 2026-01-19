@@ -25,9 +25,7 @@
   }
 
   &__logo {
-    > a {
-      color: $color-white;
-    }
+    color: $color-white;
   }
 
   &__nav {
@@ -80,3 +78,33 @@
   }
 }
 
+/*ヒーローを過ぎた時*/
+.p-header.p-header--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  animation: slideDown 0.3s ease-in-out;
+  background: $color-white;
+  box-shadow: 0 3px 6px 0 rgba(51, 51, 51, 0.25);
+
+  .p-header__logo {
+    color: $color-main;
+  }
+
+  .c-nav-menu__link {
+    @include mq(pc) {
+      color: $color-text;
+    }
+  }
+
+  .c-hamburger__bar {
+    background-color: $color-text;
+  }
+
+  .c-hamburger__text {
+    color: $color-text;
+  }
+}

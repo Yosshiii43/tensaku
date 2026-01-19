@@ -1,0 +1,44 @@
+/******************************
+ポップアップバナー
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-popup {
+  position: fixed;
+  bottom: 0;
+  left: rem(8);
+  z-index: $z-popup;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  @include mq(tab) {
+    left: rem(20);
+  }
+
+  &__inner {
+    position: relative;
+    width: rem(200);
+    height: auto;
+    padding: rem(10) rem(10) 0 0;
+    @include mq(tab) {
+      width: rem(300);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+  }
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
