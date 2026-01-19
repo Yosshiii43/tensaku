@@ -2,21 +2,22 @@
  * home.js  –  ver.1.0
  *************************************************************************/
 //--------------------------------------------------------------------------
-// スクロールするとアニメーション付きで追従ヘッダーを出すコード
+// heroより下までスクロールするとアニメーション付きで追従ヘッダーを出すコード
 //--------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.p-header');
   const hero = document.querySelector('.p-hero');
-  window.addEventListener('scroll', () => {
-    console.log(window.innerHeight);
-    const scrollY = window.pageYOffset;
-    const heroHeight = hero.offsetHeight; // ヒーローの高さを取得
-    if (scrollY >= heroHeight) {
-      header.classList.add('p-header--sticky');
-    } else {
+  if (!header || !hero) return;
+
+  // IntersectionObserverでhero監視
+  const io = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
       header.classList.remove('p-header--sticky');
+    } else {
+      header.classList.add('p-header--sticky');
     }
-  });
+  }, { root: null, threshold: 0 }); //画面(viewport)を基準にし、1pxでも見えていたら
+  io.observe(hero);
 });
 
 //--------------------------------------------------------------------------
