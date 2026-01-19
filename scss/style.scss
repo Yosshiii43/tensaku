@@ -19,6 +19,7 @@
   @use "./object/component/flow-list";
   @use "./object/component/price-card";
   @use "./object/component/accordion";
+  @use "./object/component/scroll-page-top";
 
   /*project*/
   @use "./object/project/header" as ph;
