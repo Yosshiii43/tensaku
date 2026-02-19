@@ -20,6 +20,7 @@
   @use "./object/component/price-card";
   @use "./object/component/accordion";
   @use "./object/component/scroll-page-top";
+  @use "./object/component/lower-hero";
 
   /*project*/
   @use "./object/project/header" as ph;

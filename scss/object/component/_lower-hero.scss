@@ -1,0 +1,39 @@
+/******************************
+下層ページheroのスタイル
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-lower-hero {
+  margin-top: $header-hsp;
+  padding-block: rem(58) rem(77);
+  background: linear-gradient(95deg, $color-secondary -0.71%, $color-main 100%);
+  text-align: center;
+  @include mq(pc) {
+    margin-top: $header-hpc;
+    padding-block: rem(68) rem(87);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(27);
+  }
+  &__ttl {
+    padding: rem(10) rem(15);
+    background-color: $color-white;
+    color: $color-main;
+    font-size: rclamp(32, 40, 768, 1280);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__discription {
+    font-size: rem(16);
+    line-height: 1.5;
+    color: $color-white;
+    max-width: rem(697);
+    margin-inline: auto;
+  }
+}
