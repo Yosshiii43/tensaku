@@ -10,30 +10,41 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  gap: rem(5);
 
   &__head {
     color: $color-darkgreen;
     font-family: "Roboto Condensed";
-    font-size: rclamp(12, 15, 320, 375);
+    font-size: rclamp(12, 15, 768, 1280);
     font-style: normal;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
+    margin-bottom: rem(7);
+    @include mq(tab) {
+      margin-bottom: rem(9);
+    }
   }
 
   &__body {
-    font-size: rclamp(22, 36, 375, 1280);
+    font-size: rclamp(24, 36, 768, 1280);
     font-weight: 700;
     line-height: 1.2;
+    margin-bottom: rem(13.5);
+    @include mq(tab) {
+      line-height: 1;
+      margin-bottom: rem(12);
+    }
   }
 
   &::after {
     display: block;
     content: "";
-    width: rem(70);
-    height: rem(12);
+    width: rem(50);
+    height: rem(2);
     border-bottom: 2px solid $color-darkgreen;
     margin-inline: auto;
+    @include mq(tab) {
+      width: rem(70);
+    }
   }
 }
