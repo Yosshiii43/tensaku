@@ -8,17 +8,24 @@
   padding-bottom: rem(90);
 
   &__ttl {
-    margin-bottom: rem(14);
+    margin-bottom: rem(26);
+    @include mq(tab) {
+      margin-bottom: rem(14);
+    }
   }
 
   &__discription {
     max-width: rem(480);
-    margin-inline: auto;
-    margin-bottom: rem(86);
+    margin-inline: rem(-10);
+    margin-bottom: rem(81);
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    @include mq(tab) {
+      margin-inline: auto;
+      margin-bottom: rem(86);
+    }
 
     > span {
       display: inline-block;
@@ -26,10 +33,11 @@
   }
 
   &__list {
-    width: rem(248);
+    width: 100%;
+    max-width: rem(335);
     margin-inline: auto;
     @include mq(tab) {
-      width: 100%;
+      max-width: none;
       max-width: rem(984);
     }
   }

@@ -12,24 +12,27 @@
   }
 
   &__item {
-    padding: rem(27) rem(13) rem(20);
+    display: flex;
+    flex-direction: row;
+    padding: rem(24) rem(20) rem(20) rem(12);
     position: relative;
     @include mq(tab) {
+      flex-direction: column;
       padding: rem(27) rem(6) rem(29) rem(20);
     }
 
     &::after {
       position: absolute;
       bottom: -14px;
-      left: 0;
+      left: rem(25);
       z-index: 1;
       display: block;
       content: "";
       width: 0;
       height: 0;
       border-style: solid;
-      border-right: var(--sp-triangle-hlef, 124px) solid transparent;
-      border-left: var(--sp-triangle-hlef,  124px) solid transparent;
+      border-right: var(--sp-triangle-hlef, 27px) solid transparent;
+      border-left: var(--sp-triangle-hlef,  27px) solid transparent;
       border-bottom: 0;
       @include mq(tab) {
         bottom: auto;
@@ -86,6 +89,7 @@
     font-weight: 700;
     line-height: 1;
     margin-bottom: rem(35);
+    padding-right: rem(23);
   }
 
   &__ttl {
@@ -101,5 +105,19 @@
 
   &__text {
     font-size: rem(14);
+  }
+  
+  &__right {
+    width: rem(201);
+    @include mq(tab) {
+      width: auto;
+    }
+  }
+
+  &__br {
+    display: none;
+    @include mq(pc) {
+      display: inline;
+    }
   }
 }
