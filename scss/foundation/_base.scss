@@ -71,7 +71,7 @@ body  {
   color: $color-text;
   line-height: 1.5;
   overflow-wrap: anywhere;
-  word-break: normal;
+  //word-break: normal;
   line-break: strict;
 
   &.is-scrollLock { overflow: hidden; }
