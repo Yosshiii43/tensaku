@@ -6,7 +6,7 @@
 
 .c-lower-hero {
   margin-top: $header-hsp;
-  padding-block: rem(58) rem(77);
+  padding-block: rem(68) rem(68);
   background: linear-gradient(95deg, $color-secondary -0.71%, $color-main 100%);
   text-align: center;
   @include mq(pc) {
@@ -24,7 +24,7 @@
     padding: rem(10) rem(15);
     background-color: $color-white;
     color: $color-main;
-    font-size: rclamp(32, 40, 768, 1280);
+    font-size: rclamp(28, 40, 375, 1280);
     font-weight: 700;
     line-height: 1;
   }
