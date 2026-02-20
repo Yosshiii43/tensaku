@@ -35,5 +35,8 @@
     color: $color-white;
     max-width: rem(697);
     margin-inline: auto;
+    @include mq(tab) {
+      width: 80%;
+    }
   }
 }
