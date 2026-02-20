@@ -1,0 +1,17 @@
+/******************************
+非適用
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.u-none--tab {
+  @include mq(tab) {
+    display: none;
+  }
+}
+
+.u-none--pc {
+  @include mq(pc) {
+    display: none;
+  }
+}
