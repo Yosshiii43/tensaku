@@ -1,0 +1,67 @@
+/******************************
+資料ダウンロードページ フォーム
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-whitepaper-form {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    font-size: rem(14);
+    margin-bottom: rem(37);
+  }
+
+  &__input,
+  &__select {
+    border-radius: 5px;
+    border: 1px solid $color-lightgray2;
+    background: $color-white;
+    color: $color-textgray;
+    padding: rem(9) rem(10) rem(9) rem(12);
+  }
+
+  &__input[placeholder],
+  &__select[placeholder] {
+    color: $color-textgray;
+  }
+
+  &__input {
+    margin-bottom: rem(10);
+  }
+
+  &__select {
+    margin-bottom: rem(24);
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("../img/icon_arrow_down.svg");
+    background-repeat: no-repeat;
+    background-position: right rem(10) center;
+    background-size: rem(14) rem(14);
+  }
+
+  &__notes {
+    font-size: rem(12);
+    line-height: 1;
+    margin-bottom: rem(24);
+  }
+
+  &__link {
+    color: $color-linkblue;
+    text-decoration: underline;
+  }
+
+  &__button {
+    width: 100%;
+    padding: rem(10);
+    background-color: $color-main;
+    color: $color-white;
+    font-size: rem(16);
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+}

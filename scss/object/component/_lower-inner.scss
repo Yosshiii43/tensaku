@@ -1,0 +1,9 @@
+/******************************
+下層のメインコンテンツ
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.c-lower-inner {
+  background-color: $color-bg;
+}

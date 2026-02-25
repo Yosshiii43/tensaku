@@ -1,0 +1,97 @@
+/******************************
+資料ダウンロードページ・資料ダウンロード完了ページメインコンテンツ
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-whitepaper-contents {
+  display: flex;
+  flex-direction: column;
+  padding-block: rem(78) rem(128);
+  gap: rem(60);
+  @include mq(tab) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: rem(28);
+  }
+
+  //左側
+  &__info {
+    @include mq(tab) {
+      margin-top: rem(19);
+      flex-basis: 52.41%;
+      max-width: rem(520);
+    }
+  }
+
+  &__discription {
+    margin-bottom: rem(31);
+    @include mq(tab) {
+      margin-left: rem(4);
+    }
+  }
+
+  &__images {
+    width: 100%;
+    height: auto;
+    margin-bottom: rem(58);
+  }
+
+  &__text {
+    max-width: rem(416);
+    margin-bottom: rem(35);
+    @include mq(tab) {
+      margin-left: rem(4);
+    }
+  }
+
+  &__tel-text {
+    font-size: rem(14);
+    line-height: 1;
+    margin-bottom: rem(15);
+    @include mq(tab) {
+      margin-left: rem(4);
+    }
+  }
+
+  &__tel-link,
+  &__tel-number {
+    color: $color-main;
+    font-size: rclamp(32, 40, 768, 1280);
+    font-weight: 700;
+    line-height: 1;
+    @include mq(tab) {
+      margin-left: rem(4);
+    }
+  }
+
+  &__tel-link {
+    @include mq(tab) {
+      display: none;
+    }
+  }
+
+  &__tel-number {
+    display: none;
+    @include mq(tab) {
+      display: inline-block;
+    }
+  }
+
+  //右側
+  &__form {
+    width: 100%;
+    background-color: $color-white;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(51, 51, 51, 0.25);
+    padding: rem(30) rem(30) rem(50);
+    @include mq(tab) {
+      flex-basis: 44.76%;
+      max-width: rem(440);
+      margin-right: rem(4);
+    }
+  }
+
+
+}
