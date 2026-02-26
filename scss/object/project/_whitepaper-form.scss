@@ -31,14 +31,30 @@
     margin-bottom: rem(10);
   }
 
+  &__select ,
+  ::picker(select) {
+    appearance: base-select;
+  }
+
   &__select {
     margin-bottom: rem(24);
-    -webkit-appearance: none;
-    appearance: none;
-    background-image: url("../img/icon_arrow_down.svg");
-    background-repeat: no-repeat;
-    background-position: right rem(10) center;
-    background-size: rem(14) rem(14);
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__select::picker-icon {
+    display: flex;
+    align-items: center;
+    width: rem(14);
+    height: rem(14);
+    content: url("../img/icon_arrow_down.svg");
+    transition-property: rotate;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+  }
+
+  &__select:open::picker-icon {
+    rotate: 180deg;
   }
 
   &__notes {
