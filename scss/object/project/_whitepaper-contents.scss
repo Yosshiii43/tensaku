@@ -93,5 +93,28 @@
     }
   }
 
+  &__tanks-message {
+    font-size: rclamp(18, 24, 768, 1024);
+    font-weight: 700;
+    margin-bottom: rem(22.5);
+  }
 
+  &__download-text {
+    font-size: rem(14);
+    line-height: 1.5;
+    margin-bottom: rem(10);
+  }
+
+  &__download-link {
+    display: inline-block;
+    color: $color-linkblue;
+    font-size: rem(14);
+    line-height: 1;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
 }

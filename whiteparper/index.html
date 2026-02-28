@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kiso.css@latest/kiso.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="p-body p-contact">
+<body class="p-body p-whitepaper">
   <header class="l-header p-header p-header--sticky" id="js-header">
     <div class="p-header__inner">
       <div class="p-header__logo c-logo">
@@ -103,13 +103,97 @@
     <section class="c-lower-hero">
       <div class="c-lower-hero__inner l-inner">
         <h1 class="c-lower-hero__ttl">資料ダウンロード</h1>
-        <p class="c-lower-hero__discription">TENSAKU導入企業の成功事例や、詳細な機能説明、未リリースの今後のアップデート予定などを資料に掲載しています。</p>
+        <p class="c-lower-hero__discription">TENSAKU導入企業の成功事例や、<br class="u-none--pc">詳細な機能説明、未リリースの<br class="u-none--tab u-none--pc">今後のアップデート予定などを<br class="u-none--pc">資料に掲載しています。</p>
       </div>
     </section>
 
-    <section class="p-whitepaper-main">
+    <div class="p-whitepaper-inner c-lower-inner">
+      <div class="p-whitepaper-contents l-inner">
+        <div class="p-whitepaper-contents__info">
+          <div class="p-whitepaper-contents__discription">
+            <p>TENSAKUは、情報共有、業務の改善・デジタル化、セキュリティ管理など社内の課題を解決できるソフトウェアです。</p>
+            <p>本資料では、製品特長や基本機能、ご利用ガイド、価格表など、詳しくご紹介しています。</p>
+          </div>
 
-    </section>
+          <img class="p-whitepaper-contents__images" src="/img/img_materials.png" alt="資料イメージ" width="1024" height="396">
+
+
+          <p class="p-whitepaper-contents__text">フォーム送信完了後、PDFファイルのダウンロード画面が表示されます。</p>
+
+          <div class="p-whitepaper-contents__tel">
+            <p class="p-whitepaper-contents__tel-text">お電話でも承ります。お気軽にご連絡ください。</p>
+            <a class="p-whitepaper-contents__tel-link u-none--pc" href="tel:0120-XXX-XXX">0120-XXX-XXX</a>
+            <p class="p-whitepaper-contents__tel-number">0120-XXX-XXX</p>
+          </div>
+        </div> <!-- p-whitepaper-contents__info -->
+
+        <div class="p-whitepaper-contents__form">
+          <form action="" class="p-whitepaper-form" id="whitepaper-form">
+            <p class="p-whitepaper-form__text">下記フォームに必要事項をご記入の上、ダウンロードをお願いします。</p>
+            <input class="p-whitepaper-form__input" type="text" name="name" id="name" placeholder="氏名" autocomplete="name" required>
+            <input class="p-whitepaper-form__input" type="text" name="company-name" id="company" placeholder="貴社名" autocomplete="organization" required>
+            <input class="p-whitepaper-form__input" type="email" name="email" id="email" placeholder="メールアドレス" autocomplete="email" required>
+            <input class="p-whitepaper-form__input" type="tel" name="tel" id="tel" placeholder="電話番号" autocomplete="tel-national" required>
+            <select class="p-whitepaper-form__select" name="prefecture" id="prefecture" aria-label="都道府県" required>
+              <option value="">都道府県</option>
+              <option value="hokkaido">北海道</option>
+              <option value="aomori">青森</option>
+              <option value="iwate">岩手</option>
+              <option value="miyagi">宮城</option>
+              <option value="akita">秋田</option>
+              <option value="yamagata">山形</option>
+              <option value="fukushima">福島</option>
+              <option value="ibaraki">茨城</option>
+              <option value="tochigi">栃木</option>
+              <option value="gunma">群馬</option>
+              <option value="saitama">埼玉</option>
+              <option value="chiba">千葉</option>
+              <option value="tokyo">東京</option>
+              <option value="kanagawa">神奈川</option>
+              <option value="niigata">新潟</option>
+              <option value="toyama">富山</option>
+              <option value="ishikawa">石川</option>
+              <option value="fukui">福井</option>
+              <option value="yamanashi">山梨</option>
+              <option value="nagano">長野</option>
+              <option value="gifu">岐阜</option>
+              <option value="shizuoka">静岡</option>
+              <option value="aichi">愛知</option>
+              <option value="mie">三重</option>
+              <option value="shiga">滋賀</option>
+              <option value="kyoto">京都</option>
+              <option value="osaka">大阪</option>
+              <option value="hyogo">兵庫</option>
+              <option value="nara">奈良</option>
+              <option value="wakayama">和歌山</option>
+              <option value="tottori">鳥取</option>
+              <option value="shimane">島根</option>
+              <option value="okayama">岡山</option>
+              <option value="hiroshima">広島</option>
+              <option value="yamaguchi">山口</option>
+              <option value="tokushima">徳島</option>
+              <option value="kagawa">香川</option>
+              <option value="ehime">愛媛</option>
+              <option value="kochi">高知</option>
+              <option value="fukuoka">福岡</option>
+              <option value="saga">佐賀</option>
+              <option value="nagasaki">長崎</option>
+              <option value="kumamoto">熊本</option>
+              <option value="oita">大分</option>
+              <option value="miyazaki">宮崎</option>
+              <option value="kagoshima">鹿児島</option>
+              <option value="okinawa">沖縄</option>
+            </select>
+
+            <p class="p-whitepaper-form__notes">送信前に<a class="p-whitepaper-form__link" href="/policy" target="_blank">サイトポリシー</a>をご確認くださいませ。</p>
+
+            <a class="p-whitepaper-form__button" href="/whitepaper-download/" >ダウンロードする</a>
+
+          </form> <!-- p-whitepaper-form -->
+        </div> <!-- p-whitepaper-contents__form -->
+
+      </div> <!--p-whitepaper-contents -->
+    </div> <!-- c-lower-inner -->
   </main>
 
   <footer class="p-footer">
@@ -175,5 +259,6 @@
   <!-- トップへ戻るボタン ここまで-->
 
   <script src="/js/main.js" defer></script>
+  <script src="/js/whitepaper.js" defer></script>
 </body>
 </html>

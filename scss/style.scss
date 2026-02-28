@@ -21,6 +21,8 @@
   @use "./object/component/accordion";
   @use "./object/component/scroll-page-top";
   @use "./object/component/lower-hero";
+  @use "./object/component/lower-inner";
+  
 
   /*project*/
   @use "./object/project/header" as ph;
@@ -37,6 +39,8 @@
   @use "./object/project/question";
   @use "./object/project/cta";
   @use "./object/project/popup";
+  @use "./object/project/whitepaper-contents";
+  @use "./object/project/whitepaper-form";
 
 /*utility*/
   @use "./object/utility/none";
