@@ -4,6 +4,13 @@
 @use "../../foundation/forwards" as *;
 @use "sass:math";
 
+.u-none--sp {
+  display: none;
+  @include mq(tab) {
+    display: initial;
+  }
+}
+
 .u-none--tab {
   @include mq(tab) {
     display: none;
