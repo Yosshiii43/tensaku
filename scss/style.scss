@@ -22,7 +22,7 @@
   @use "./object/component/scroll-page-top";
   @use "./object/component/lower-hero";
   @use "./object/component/lower-inner";
-  
+
 
   /*project*/
   @use "./object/project/header" as ph;
@@ -41,6 +41,8 @@
   @use "./object/project/popup";
   @use "./object/project/whitepaper-contents";
   @use "./object/project/whitepaper-form";
+  @use "./object/project/contact";
+  @use "./object/project/contact-form";
 
 /*utility*/
   @use "./object/utility/none";

@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kiso.css@latest/kiso.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="p-body">
+<body class="p-body p-contact">
   <header class="l-header p-header p-header--sticky" id="js-header">
     <div class="p-header__inner">
       <div class="p-header__logo c-logo">
@@ -100,12 +100,159 @@
   </header>
 
   <main>
-    <section class="c-lower-hero">
+    <section class="p-contact__hero c-lower-hero">
       <div class="c-lower-hero__inner l-inner">
-        <h1 class="c-lower-hero__ttl">資料ダウンロード</h1>
-        <p class="c-lower-hero__discription">TENSAKU導入企業の成功事例や、詳細な機能説明、未リリースの今後のアップデート予定などを資料に掲載しています。</p>
+        <h1 class="c-lower-hero__ttl">利用申し込み</h1>
+        <p class="c-lower-hero__discription">TENSAKU利用の申し込みは<br class="u-none--tab u-none--pc">こちらのフォームより承ります。<br>
+                                              送信後、1営業日以内に<br class="u-none--tab u-none--pc">担当者よりご連絡いたします。</p>
       </div>
     </section>
+
+    <div class="p-contact__inner c-lower-inner">
+        <form class="p-contact__form p-contact-form" action="">
+          <div class="p-contact-form__item">
+            <label class="p-contact-form__label" for="name"><span class="p-contact-form__required">必須</span>お名前</label>
+            <input class="p-contact-form__input p-contact-form__input--name" type="text" id="name" name="name" placeholder="例：添削　太郎" required>
+          </div>
+
+          <div class="p-contact-form__item">
+            <label class="p-contact-form__label" for="company"><span class="p-contact-form__required">必須</span>会社名</label>
+            <input class="p-contact-form__input" type="text" id="company" name="company" placeholder="例：株式会社TENSAKU" required>
+          </div>
+
+          <div class="p-contact-form__item">
+            <label class="p-contact-form__label" for="email"><span class="p-contact-form__required">必須</span>メールアドレス</label>
+            <input class="p-contact-form__input" type="email" id="email" name="email" placeholder="例：tensaku@tensaku.net" required>
+          </div>
+
+          <div class="p-contact-form__item">
+            <label class="p-contact-form__label" for="phone"><span class="p-contact-form__required">必須</span>電話番号</label>
+            <input class="p-contact-form__input" type="tel" id="phone" name="phone" placeholder="例：03002xxxx（ハイフンなし）" required>
+          </div>
+
+          <div class="p-contact-form__item p-contact-form__item--url">
+            <label class="p-contact-form__label" for="url">貴社サイトURL</label>
+            <input class="p-contact-form__input" type="url" id="url" name="url" placeholder="例：https://tensaku.com/">
+          </div>
+
+          <fieldset class="p-contact-form__group">
+            <legend class="p-contact-form__legend"><span><span class="p-contact-form__required">必須</span>ご利用意図（複数選択可能）</span></legend>
+            <div class="p-contact-form__item--checkbox">
+              <label class="p-contact-form__label--group" for="inquiry1">
+                <input class="p-contact-form__checkbox" type="checkbox" id="inquiry1" name="inquiry" value="クリエイティブの添削を効率化したい">
+                クリエイティブの添削を効率化したい
+              </label>
+            </div>
+            <div class="p-contact-form__item--checkbox">
+              <label class="p-contact-form__label--group" for="inquiry2">
+                <input class="p-contact-form__checkbox" type="checkbox" id="inquiry2" name="inquiry" value="添削のログを残し、作業が属人化しないようにしたい">
+                添削のログを残し、作業が属人化しないようにしたい
+              </label>
+            </div>
+            <div class="p-contact-form__item--checkbox">
+              <label class="p-contact-form__label--group" for="inquiry3">
+                <input class="p-contact-form__checkbox" type="checkbox" id="inquiry3" name="inquiry" value="クライアントとの進捗報告の共有">
+                クライアントとの進捗報告の共有
+              </label>
+            </div>
+            <div class="p-contact-form__item--checkbox">
+              <label class="p-contact-form__label--group" for="inquiry4">
+                <input class="p-contact-form__checkbox" type="checkbox" id="inquiry4" name="inquiry" value="文章の添削">
+                文章の添削
+              </label>
+            </div>
+            <div class="p-contact-form__item--checkbox">
+              <label class="p-contact-form__label--group" for="inquiry5">
+                <input class="p-contact-form__checkbox" type="checkbox" id="inquiry5" name="inquiry" value="その他">
+                その他
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="p-contact-form__group">
+            <legend class="p-contact-form__legend"><span><span class="p-contact-form__required">必須</span>ご検討状況</span></legend>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="status1">
+                <input class="p-contact-form__radio" type="radio" id="status1" name="status" value="TENSAKUを利用するのが決定している" required>
+                TENSAKUを利用するのが決定している
+              </label>
+            </div>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="status2">
+                <input class="p-contact-form__radio" type="radio" id="status2" name="status" value="利用検討中・他社比較中" required>
+                利用検討中・他社比較中
+              </label>
+            </div>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="status3">
+                <input class="p-contact-form__radio" type="radio" id="status3" name="status" value="添削サービスの情報収集中" required>
+                添削サービスの情報収集中
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="p-contact-form__group">
+            <legend class="p-contact-form__legend"><span><span class="p-contact-form__required">必須</span>どこでTENSAKUをお知りになりましたか？</span></legend>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="source1">
+                <input class="p-contact-form__radio" type="radio" id="source1" name="source" value="ネット検索">
+                ネット検索
+              </label>
+            </div>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="source2">
+                <input class="p-contact-form__radio" type="radio" id="source2" name="source" value="テレビCM">
+                テレビCM
+              </label>
+            </div>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="source3">
+                <input class="p-contact-form__radio" type="radio" id="source3" name="source" value="X(旧Twitter)">
+                X(旧Twitter)
+              </label>
+            </div>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="source4">
+                <input class="p-contact-form__radio" type="radio" id="source4" name="source" value="Facebook">
+                Facebook
+              </label>
+            </div>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="source5">
+                <input class="p-contact-form__radio" type="radio" id="source5" name="source" value="プレスリリース">
+                プレスリリース
+              </label>
+            </div>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="source6">
+                <input class="p-contact-form__radio" type="radio" id="source6" name="source" value="ブログ記事">
+                ブログ記事
+              </label>
+            </div>
+            <div class="p-contact-form__item--radio">
+              <label class="p-contact-form__label--group" for="source7">
+                <input class="p-contact-form__radio" type="radio" id="source7" name="source" value="その他">
+                その他
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="p-contact-form__group">
+            <legend class="p-contact-form__legend"><span><span class="p-contact-form__required">必須</span>個人情報の取り扱いについて</span></legend>
+            <div class="p-contact-form__item--checkbox">
+              <label class="p-contact-form__label--group" for="policy">
+                <input class="p-contact-form__checkbox" type="checkbox" id="policy" name="policy" value="同意する" required>
+                同意する
+              </label>
+            </div>
+            <p class="p-contact-form__policy-text">個人情報の取り扱い方針については<a class="p-contact-form__policy-link" href="/policy/" target="_blank">こちら</a>をご確認下さい。</p>
+          </fieldset>
+
+          <div class="p-contact-form__button">
+            <button class="" type="submit" id="submit" >この内容でお問い合わせする</button>
+          </div>
+        </form>
+      </div>
   </main>
 
   <footer class="p-footer">
@@ -171,5 +318,6 @@
   <!-- トップへ戻るボタン ここまで-->
 
   <script src="/js/main.js" defer></script>
+  <script src="/js/contact.js" defer></script>
 </body>
 </html>
