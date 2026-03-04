@@ -1,10 +1,10 @@
 /******************************
-利用規約ページのスタイル
+利用規約・サイトポリシーページのスタイル
 ******************************/
 @use "../../foundation/forwards" as *;
 @use "sass:math";
 
-.p-terms {
+.p-terms-policy {
   &__inner{
     padding-block: rem(90) rem(97);
   }
