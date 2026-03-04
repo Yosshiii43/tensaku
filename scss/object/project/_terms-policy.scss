@@ -34,6 +34,7 @@
     font-size: rclamp(18, 24, 375, 1024);
     font-weight: 700;
     margin-bottom: rem(38);
+    text-autospace: no-autospace;
   }
 
   &__list {
