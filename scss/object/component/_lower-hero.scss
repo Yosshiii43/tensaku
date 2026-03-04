@@ -40,3 +40,10 @@
     }
   }
 }
+
+.c-lower-hero--terms {
+  padding-block: rem(80);
+  @include mq(tab) {
+    padding-block: rem(115);
+  }
+}

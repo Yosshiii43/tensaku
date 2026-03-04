@@ -43,6 +43,8 @@
   @use "./object/project/whitepaper-form";
   @use "./object/project/contact";
   @use "./object/project/contact-form";
+  @use "./object/project/contact-thanks";
+  @use "./object/project/terms";
 
 /*utility*/
   @use "./object/utility/none";

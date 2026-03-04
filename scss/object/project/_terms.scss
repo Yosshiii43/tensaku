@@ -1,0 +1,46 @@
+/******************************
+利用規約ページのスタイル
+******************************/
+@use "../../foundation/forwards" as *;
+@use "sass:math";
+
+.p-terms {
+  &__inner{
+    padding-block: rem(90) rem(97);
+  }
+
+  &__body {
+    width: 100%;
+    padding-inline: var(--inner-p);
+    margin-inline: auto;
+    @include mq(pc) {
+      max-width: calc(rem(984) + var(--inner-p) * 2);
+    }
+  }
+
+  &__discription {
+    margin-bottom: rem(58);
+  }
+
+  &__unit {
+    margin-bottom: rem(38);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__unit-ttl {
+    font-size: rclamp(18, 24, 375, 1024);
+    font-weight: 700;
+    margin-bottom: rem(38);
+  }
+
+  &__list {
+    margin-left: 23px;
+    > li {
+      list-style: decimal;
+    }
+  }
+
+}
