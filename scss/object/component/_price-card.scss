@@ -75,15 +75,15 @@
   &__contents {
     display: flex;
     flex-direction: column;
-    margin-bottom: rem(61) - rem(17);
+    margin-bottom: rem(45);
   }
 
   &__content {
     font-size: rem(14);
-    line-height: 1.2;
+    line-height: 1.5;
     letter-spacing: -0.2px;
     text-align: center;
-    padding-block: rem(17) - rem(1.5);
+    padding-block: rem(13.5);
     border-bottom: 2px solid $color-midlegray;
 
     &:last-child {
