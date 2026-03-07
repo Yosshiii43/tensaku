@@ -16,7 +16,8 @@
 
   &__discription {
     max-width: rem(480);
-    margin-inline: rem(-10);
+    //margin-inline: rem(-10);
+    margin-inline: auto;
     margin-bottom: rem(81);
     text-align: center;
     display: flex;
