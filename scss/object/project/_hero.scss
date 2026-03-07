@@ -91,7 +91,7 @@
     padding: rclamp(12, 18, 375, 1024) rclamp(15, 37, 375, 1024) rclamp(12, 19, 375, 1024);
     background-color: $color-white;
     border-radius: 25px;
-
+    
     &::after {
       content: '';
       display: block;
