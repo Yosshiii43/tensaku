@@ -19,7 +19,7 @@
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
-    margin-bottom: rem(7);
+    margin-bottom: rem(3);
     @include mq(tab) {
       margin-bottom: rem(9);
     }
@@ -28,8 +28,8 @@
   &__body {
     font-size: rclamp(24, 36, 768, 1280);
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: rem(13.5);
+    line-height: 1.5;
+    margin-bottom: rem(13);
     @include mq(tab) {
       line-height: 1;
       margin-bottom: rem(18);
