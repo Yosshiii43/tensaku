@@ -16,7 +16,7 @@
 
   &__lead {
     color: $color-white;
-    margin-bottom: rem(36);
+    margin-bottom: rem(35.5);
 
     @include mq(pc) {
       display: none;
@@ -46,7 +46,8 @@
   &__link {
     display: block;
     width: 100%;
-    padding-block: rem(19);
+    padding-block: rem(18.5);
+    padding-inline: rem(10);
     color: inherit;
     border-bottom: 1px solid $color-white;
     transition: opacity .2s;
