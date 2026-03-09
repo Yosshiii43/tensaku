@@ -26,6 +26,7 @@
 
   &__logo {
     color: $color-white;
+    flex-shrink: 0;
   }
 
   &__nav {
@@ -55,12 +56,14 @@
     display: none;
 
     @include mq(pc) {
+      flex-shrink: 0;
       display: flex;
       gap: rem(10);
     }
   }
 
   &__button {
+    flex-shrink: 0;
     @include mq(pc) {
       display: none;
     }

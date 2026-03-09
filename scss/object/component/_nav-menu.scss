@@ -24,7 +24,7 @@
   }
 
   &__list{
-    margin-bottom:rem(39);
+    margin-bottom:rem(38.5);
     padding: 0;
     list-style: none;
     display: flex;
@@ -43,6 +43,10 @@
     }
   }
 
+  &__item {
+    flex-shrink: 0;
+  }
+
   &__link {
     display: block;
     width: 100%;
@@ -53,6 +57,7 @@
     transition: opacity .2s;
     @include mq(pc) {
       padding-block: 0;
+      padding-inline: 0;
       border: none;
     }
 
