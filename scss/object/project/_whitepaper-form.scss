@@ -22,42 +22,29 @@
     padding: rem(9) rem(10) rem(9) rem(12);
   }
 
-  &__input::placeholder {
-    color: $color-textgray;
-  }
-
   &__input {
     margin-bottom: rem(10);
   }
 
-  &__select ,
-  ::picker(select) {
-    appearance: base-select;
+  &__input::placeholder {
+    color: $color-textgray;
   }
 
-  &__select {
+  &__select{
     margin-bottom: rem(24);
     display: inline-flex;
     align-items: center;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background: url("../img/icon_arrow_down.svg") no-repeat right rem(10) center / rem(14);
+    padding-right: rem(30);
   }
 
   &__select:required:invalid {
     color: $color-textgray;
-  }
-
-  &__select::picker-icon {
-    display: flex;
-    align-items: center;
-    width: rem(14);
-    height: rem(14);
-    content: url("../img/icon_arrow_down.svg");
-    transition-property: rotate;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-  }
-
-  &__select:open::picker-icon {
-    rotate: 180deg;
   }
 
   &__notes {
