@@ -35,6 +35,10 @@
     gap: rem(12);
   }
 
+  &__label--policy {
+    font-weight: 700;
+  }
+
   &__required {
     display: inline-block;
     flex-shrink: 0;
