@@ -7,7 +7,7 @@
 .p-whitepaper-contents {
   display: flex;
   flex-direction: column;
-  padding-block: rem(78) rem(128);
+  padding-block: rem(78) rem(125);
   gap: rem(60);
   @include mq(tab) {
     flex-direction: row;
