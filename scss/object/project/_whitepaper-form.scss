@@ -18,12 +18,11 @@
     border-radius: 5px;
     border: 1px solid $color-lightgray2;
     background: $color-white;
-    color: $color-textgray;
+    color: $color-text;
     padding: rem(9) rem(10) rem(9) rem(12);
   }
 
-  &__input[placeholder],
-  &__select[placeholder] {
+  &__input::placeholder {
     color: $color-textgray;
   }
 
@@ -40,6 +39,10 @@
     margin-bottom: rem(24);
     display: inline-flex;
     align-items: center;
+  }
+
+  &__select:required:invalid {
+    color: $color-textgray;
   }
 
   &__select::picker-icon {
