@@ -74,6 +74,7 @@ body  {
   //word-break: normal;
   text-autospace: no-autospace;
   line-break: strict;
+  text-spacing-trim: space-all;
 
   &.is-scrollLock { overflow: hidden; }
 }
