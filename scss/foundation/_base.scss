@@ -74,7 +74,7 @@ body  {
   //word-break: normal;
   text-autospace: no-autospace;
   line-break: strict;
-  text-spacing-trim: space-all;
+  text-spacing-trim: space-all;//役物文字の間隔を詰めない
 
   &.is-scrollLock { overflow: hidden; }
 }
