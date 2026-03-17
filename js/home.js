@@ -29,13 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
   (() => {
     const popup = document.querySelector('.p-popup');
     const closeBtn = document.querySelector('.js-popupClose');
-    if (!popup || localStorage.getItem('popupClosed') === 'true') return;
+    // popupが存在しない or すでに閉じられている場合は何もしない
+    if (!popup || localStorage.getItem('popupClosed') === 'true') {
+      return;
+    }
 
     const triggerHeight = document.documentElement.scrollHeight / 2;
 
     const onScroll = () => {
       if (window.scrollY >= triggerHeight) {
         popup.classList.add('is-active');
+        // 一度表示したらスクロール監視を解除
         window.removeEventListener('scroll', onScroll);
       }
     };
