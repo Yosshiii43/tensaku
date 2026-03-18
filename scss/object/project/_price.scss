@@ -21,7 +21,8 @@
   }
 
   &__list {
-    width: rem(309);
+    width: 100%;
+    max-width: rem(309);
     margin-inline: auto;
     border-radius: 20px;
     margin-bottom: rem(45);
@@ -29,7 +30,6 @@
     grid-template-columns: 1fr;
     gap: rem(28);
     @include mq(tab) {
-      width: 100%;
       max-width: rem(983);
       grid-template-columns: repeat(3, 1fr);
       gap: rclamp(16, 28, 768, 1280);
